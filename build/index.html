@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikesh's Portfilio</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <script src="./javascript/script.js" defer></script>
+
+</head>
+
+<body class="min-h-screen bg-slate-50 dark:bg-slate-800 dark:text-white">
+
+    <!-- Header -->
+    <header class="bg-cyan-500 sticky top-0 z-10">
+        <section class="max-w-6xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-3xl font-medium"><a href="#hero">Nikesh Chaudhary</a></h1>
+            <div class="flex gap-8 items-center">
+                <button id="theme"><img onclick="themeSelector()" class="h-8 hidden" id="moon" src="./image/moon.png"
+                        alt="darkTheme"><img onclick="themeSelector()" class="h-8 " src="./image/white Sun.png" id="sun"
+                        alt="lightTheme"></button>
+                <button id="hamburger-icon" class="text-3xl md:hidden" onclick="toggleMenu()">
+                    &#9776;
+                </button>
+                <!-- Large Screen NavBar -->
+                <nav class="hidden md:flex text-xl gap-6">
+                    <a href="#about" class="">About</a>
+                    <a href="#experience" class="">Experience</a>
+                    <a href="#projects" class="">Projects</a>
+                    <a href="#contact" class="">ContactMe</a>
+
+                </nav>
+                <!-- mobile-Navbar -->
+                <nav id="mobile-navbar"
+                    class="p-10 flex gap-5 flex-col fixed top-3 right-4 w-[250px] h-[250px] bg-cyan-600 rounded-2xl">
+                    <p class="absolute cursor-pointer top-4 right-6" onclick="toggleMenu()"> &#10060 </p>
+                    <a href="#about" onclick="toggleMenu()">About</a>
+                    <a href="#experience" onclick="toggleMenu()">Experience</a>
+                    <a href="#projects" onclick="toggleMenu()">Projects</a>
+                    <a href="#contact" onclick="toggleMenu()">Contact Me</a>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+    <!-- Main Section -->
+    <main class="max-w-6xl mx-auto">
+        <section id="hero"
+            class="flex scroll-mt-40 flex-col p-5 sm:flex-row items-center justify-around m-20 mx-auto max-w-4xl">
+            <img src="./image/nikesh-picture.jpeg" alt="Nikesh Chaudhary profile picture"
+                class="rounded-[50%] md:w-[380px] md:h-[380px] w-[200px] h-[200px] object-cover" />
+            <div class="m-10 text-center">
+                <div class="">
+                    <p class="dark:text-slate-400 text-slate-700 text-2xl ">Hello, I'm</p>
+                    <h1 class="dark:text-slate-50 text-black font-bold text-4xl">Nikesh Chaudhary</h1>
+                    <p class="dark:text-slate-400 text-slate-700 font-medium text-3xl">Web Developer</p>
+                </div>
+                <div class="flex my-4 gap-8 justify-center">
+                    <button
+                        class="w-50 p-3 bg-cyan-500 text-black rounded-3xl duration-500 outline-none hover:border-cyan-400 hover:bg-cyan-400"
+                        onclick="window.open('./assets/resume-example.pdf')">
+                        Download CV
+                    </button>
+                    <button
+                        class="w-50 p-3 duration-500 outline-none hover:border-black hover:text-white hover:bg-black border-slate-400 border rounded-3xl"
+                        onclick="location.href='./#contact'">
+                        Contact Info
+                    </button>
+                </div>
+                <div class="flex gap-4 w-16 mx-auto ">
+                    <img class="h-8" src="./image/linkedin.png" alt="My LinkedIn profile"
+                        onclick="location.href='https://www.linkedin.com/in/nikesh-chaudhary-534ba2230/'" />
+                    <img class="h-8" src="./image/github.png" alt="My Github profile"
+                        onclick="location.href='https://github.com/Nikeshchaudhary52494'" />
+                </div>
+            </div>
+            <img class="h-8 absolute top-[580px] right-5" src="./image/arrow.png" alt="Arrow icon" class="icon arrow"
+                onclick="location.href='./#about'" />
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="text-center scroll-mt-20 md:px-20 ">
+            <p class="font-thin text-slate-400">Get To Know More</p>
+            <h1 class="font-medium text-3xl mb-10">About Me</h1>
+
+
+            <div class="flex flex-col  md:flex-row justify-center gap-5 items-center">
+                <img class="sm:h-[300px] mb-5 sm:w-[250px] h-[250px] w-[200px] object-cover rounded-3xl"
+                    src="./image/blackpic.jpg" alt="Profile picture" class="about-pic" />
+                <div class="w-4/5">
+                    <div class="flex justify-center gap-5">
+                        <div class="rounded-3xl flex flex-col items-center border w-[300px] h-[200px]">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+                            <h3>Experience</h3>
+                            <br>
+                            <p>Learner<br />Web Development</p>
+                        </div>
+                        <div class="rounded-3xl flex flex-col items-center border w-[300px] h-[200px]">
+                            <img class="h-8" src="./image/education.png" alt="Education icon" class="icon" />
+                            <h3>Education</h3>
+                            <br>B.tech 2nd year Computer Science <br /> (Artificial Intelegence)</p>
+                        </div>
+                    </div>
+                    <p class="mt-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+                        reprehenderit et laborum, rem, dolore eum quod voluptate
+                        exercitationem nobis, nihil esse debitis maxime facere minus sint
+                        delectus velit in eos quo officiis explicabo deleniti dignissimos.
+                        Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+                        reiciendis ea magnam? Nulla, impedit fuga!
+                    </p>
+                </div>
+            </div>
+            <img class="h-8 absolute right-5" src="./image/arrow.png" alt="Arrow icon" class="icon arrow"
+                onclick="location.href='./#experience'" />
+        </section>
+
+
+        <!-- Experience Section -->
+
+        <section id="experience" class="text-center scroll-mt-20">
+            <p class="text-slate-50 font-thin mt-32">Explore My</p>
+            <h1 class="font-medium text-3xl">Experience</h1>
+
+
+            <div class=" p-4 flex flex-col md:flex-row gap-5">
+                <div class="border-slate-400 dark:bg-slate-700  mx-5 md:w-1/2 border rounded-3xl p-5">
+                    <h2 class="font-medium text-2xl text-cyan-500 mb-4">Frontend Development</h2>
+                    <div class="flex pl-5 flex-wrap justify-around">
+                        <article class="flex justify-start w-1/2 ">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>HTML5</h3>
+
+                        </article>
+                        <article class="flex justify-start w-1/2">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>CSS</h3>
+
+                        </article>
+                        <article class="flex justify-start w-1/2 ">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>React</h3>
+
+                        </article>
+                        <article class="flex justify-start w-1/2 ">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>Tailwind Css</h3>
+
+                        </article>
+                    </div>
+                </div>
+                <div class="border-slate-400 p-5 mx-5 border dark:bg-slate-700 rounded-3xl md:w-1/2">
+                    <h2 class="font-medium text-2xl text-cyan-500 mb-4">Back Development</h2>
+                    <div class="flex flex-wrap pl-5">
+                        <article class="flex justify-start w-1/2 ">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>Javascript</h3>
+
+                        </article>
+                        <article class="flex justify-start w-1/2 ">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>Node.js</h3>
+
+                        </article>
+                        <article class="flex justify-start w-1/2 ">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>Express.js</h3>
+
+                        </article>
+                        <article class="flex justify-start w-1/2 ">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>Mongodb</h3>
+
+                        </article>
+                        <article class="flex justify-start w-1/2 ">
+                            <img class="h-8" src="./image/experience.png" alt="Experience icon" class="icon" />
+
+                            <h3>Git and Github</h3>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <img class="h-8 absolute right-5" src="./image/arrow.png" alt="Arrow icon"
+                onclick="location.href='./#projects'" />
+        </section>
+        </section>
+
+        <!-- Project Section -->
+
+        <section id="projects" class="text-center w-full  scroll-mt-20 mt-32">
+            <p class="font-thin text-slate-700 dark:text-slate-400">Browse My Recent</p>
+            <h1 class="text-3xl font-medium mb-5">Projects</h1>
+            <!-- project Container -->
+            <div class="  p-4 flex flex-col md:flex-row gap-10 justify-center items-center ">
+
+
+                <!-- project 1 -->
+                <div class="border border-slate-400 rounded-3xl w-[350px] hover:shadow-lg h-[450px] p-4">
+                    <div id="project-content3">
+                        <img src="./image/Ecommerce.png" alt="Ecommerce"
+                            class=" h-[200px] object-cover border shadow-lg rounded-3xl mx-auto" />
+                        <h2 class="my-4 text-2xl font-bold">Ecommerce<br>
+                            Website</h2>
+                        <!-- button Container -->
+                        <div class="flex flex-col justify-center items-center gap-4">
+                            <button class="w-[100px] p-3 bg-cyan-500 text-black rounded-3xl"
+                                onclick="location.href='https://github.com/Nikeshchaudhary52494'">
+                                Github
+                            </button>
+                            <button onclick="flip3()" class=" p-3 bg-slate-400 text-black rounded-3xl">
+                                About Project
+                            </button>
+                        </div>
+                    </div>
+                    <!-- project Article -->
+                    <article id="project-about3" class="p-5 hidden">
+                        <h4 class="text-cyan-500 mb-5 font-medium text-2xl">
+                            Ecommerce Website </h4>
+                        <div class="text-left">
+                            <p>
+                                It is a fully functional Ecommerce Website, It has both functions for User and Admin,
+                                frontend is Made with Help of React,reduxToolKite and Styling in done with Tailwindcss
+                                backend of Website is created with Express, And to store data MongoDb is used
+                            </p>
+                        </div>
+                        <p class=" p-3 bg-slate-400 text-black rounded-3xl relative top-[85px]  " onclick="flip3() ">
+                            &#8592;
+                            Back</p>
+                    </article>
+                </div>
+
+
+                <!-- project-2 -->
+                <div class="border border-slate-400 rounded-3xl w-[350px] hover:shadow-lg h-[450px] p-4">
+                    <div id="project-content1">
+                        <img src="./image/tic tac toe.png" alt="Tic tac toe"
+                            class=" h-[200px] object-cover border shadow-lg rounded-3xl mx-auto" />
+                        <h2 class="my-4 text-2xl font-bold">Tic Tac Toe<br>
+                            Game</h2>
+                        <!-- button Container -->
+                        <div class="flex flex-col justify-center items-center gap-4">
+                            <button class="w-[100px] p-3 bg-cyan-500 text-black rounded-3xl"
+                                onclick="location.href='https://github.com/Nikeshchaudhary52494'">
+                                Github
+                            </button>
+                            <button onclick="flip1()" class=" p-3 bg-slate-400 text-black rounded-3xl">
+                                About Project
+                            </button>
+                        </div>
+                    </div>
+                    <!-- project Article -->
+                    <article id="project-about1" class="p-5 hidden">
+                        <h4 class="text-cyan-500 mb-5 font-medium text-2xl">
+                            Tic Tac Toe Game
+                        </h4>
+                        <div class="text-left">
+                            <p>
+                                IT is a multiplayer Game and two person play at a time
+                            </p>
+                            <h5 class="mb-5">Technology Used</h5>
+                            <p>
+                                <li>React</li>
+                                <li>Javascript</li>
+                                <li>Tailwind</li>
+                                <li>Html</li>
+                            </p>
+                        </div>
+                        <p class=" p-3 bg-slate-400 text-black rounded-3xl relative top-[85px]  " onclick="flip1() ">
+                            &#8592;
+                            Back</p>
+                    </article>
+                </div>
+
+                <!-- project 3 -->
+                <div class="border border-slate-400 rounded-3xl w-[350px] hover:shadow-lg h-[450px] p-4">
+                    <div id="project-content2">
+                        <img src="./image/Snakegame.png" alt="Snake game"
+                            class=" h-[200px] object-cover border shadow-lg rounded-3xl mx-auto" />
+                        <h2 class="my-4 text-2xl font-bold">Snake<br>
+                            Game</h2>
+                        <!-- button Container -->
+                        <div class="flex flex-col justify-center items-center gap-4">
+                            <button class="w-[100px] p-3 bg-cyan-500 text-black rounded-3xl"
+                                onclick="location.href='https://github.com/Nikeshchaudhary52494'">
+                                Github
+                            </button>
+                            <button onclick="flip2()" class=" p-3 bg-slate-400 text-black rounded-3xl">
+                                About Project
+                            </button>
+                        </div>
+                    </div>
+                    <!-- project Article -->
+                    <article id="project-about2" class="p-5 hidden">
+                        <h4 class="text-cyan-500 mb-5 font-medium text-2xl">
+                            Tic Tac Toe Game
+                        </h4>
+                        <div class="text-left">
+                            <p>
+                                It is simple Snake game
+                            </p>
+                            <h5 class="mb-5">Technology Used</h5>
+                            <p>
+                                <li>Javascript</li>
+                                <li>Tailwind</li>
+                                <li>Html</li>
+                            </p>
+                        </div>
+                        <p class=" p-3 bg-slate-400 text-black rounded-3xl relative top-[130px]  " onclick="flip2() ">
+                            &#8592;
+                            Back</p>
+                    </article>
+                </div>
+            </div>
+
+            </div>
+
+
+            <img src="./image/arrow.png" alt="Arrow icon" class="h-8 absolute right-5"
+                onclick="location.href='./#contact'" />
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="text-center mt-32">
+            <p class="font-thin">Get in Touch</p>
+            <h1 class="text-3xl font-medium">Contact Me</h1>
+            <div
+                class="flex gap-4 m-20 border border-slate-400 dark:bg-slate-700  rounded-[4rem] justify-center w-[450px] mx-auto md:w-[700px] md:text-2xl p-4">
+                <div class="flex gap-2">
+                    <img src="./image/email.png" alt="Email icon" class="h-8" />
+                    <p><a href="mailto:examplemail@gmail.com">nikeshchaudhary@gmail.com</a></p>
+                </div>
+                <div class="flex gap-2">
+                    <img src="./image/linkedin.png" alt="LinkedIn icon" class="h-8 " />
+                    <p><a href='https://www.linkedin.com/in/nikesh-chaudhary-534ba2230/'>LinkedIn</a></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <nav class="flex justify-center m-20  dark:text-slate-400 gap-8 ">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <p class="text-center m-20">Copyright &#169; 2023 Nikesh Chaudhary. All Rights Reserved.
+    </footer>
+</body>
+
+</html>
